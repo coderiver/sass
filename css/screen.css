@@ -18,8 +18,7 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; }
-@media screen and (min-width: 100px) { body { display: none; } }
+body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
 
 .l { width: 100%; display: inline-block; }
 .l .l-col1 { float: left; width: 20%; }
