@@ -23,6 +23,10 @@ $breaklarge: 1180px
 	text-overflow: ellipsis
 	white-space: nowrap
 
+=ie
+	*display: inline
+	*zoom: 1
+
 =cover
 	background-repeat: no-repeat
 	background-size: cover
@@ -91,8 +95,10 @@ $breaklarge: 1180px
 	*zoom: 1
 
 =placeholder-color($color)
-	&:-moz-placeholder
+	&:-moz-placeholder,
+	&::-moz-placeholder
 		color: $color
+		opacity: 1
 	&::-webkit-input-placeholder
 		color: $color
 
