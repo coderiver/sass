@@ -20,7 +20,10 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 @mixin si($sprite, $map: $icons){
 	background: sprite($map, $sprite) no-repeat;
 }
-
+//only position of sprite, to remove flicker effect in chrome
+@mixin sp($sprite, $map: $icons){
+	background-position: sprite-position($map, $sprite);
+}
 
 @mixin svg($name, $width, $height){
 	background: url('../img/svg/#{$name}.svg') no-repeat 0 0;
