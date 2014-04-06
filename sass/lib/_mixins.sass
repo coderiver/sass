@@ -286,3 +286,15 @@ $w320: 320px
 // example
 // +arr(500,50, #000, l)
 // +arr(500,50, #000, bl)
+=rotate($var)
+	-ms-transform: rotate($var+deg)
+	-webkit-transform: rotate($var+deg)
+	transform: rotate($var+deg)
+	
+=blur($var)
+	-webkit-filter: blur($var)
+	filter: blur($var)
+=scale($var)
+	-ms-transform: scale($var)
+	-webkit-transform: scale($var)
+	transform: scale($var)
