@@ -1,3 +1,3 @@
 $(document).ready(function() {
-	console.log('im ok');
+	console.log($('body').html());
 });
