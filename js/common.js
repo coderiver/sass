@@ -1,3 +1,3 @@
-head.ready(document, function () {
+head.ready(function() {
 	console.log($('body').html());
 });
