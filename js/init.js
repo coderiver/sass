@@ -1,1 +1,3 @@
-head.load("js/lib/jquery.js", "js/common.js");
+head.load("js/lib/jquery.js", 
+					"js/lib/cycle.js",
+					"js/common.js");
