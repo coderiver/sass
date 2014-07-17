@@ -16,60 +16,64 @@
 
 // responsive example, edit or remove
 // just write +r(w1280)
-$min1920: 1920px
-$w1280: 1280px
-$w1270: 1270px
-$w1024: 1024px
-$w900: 900px
-$w860: 860px
-$w800: 800px    
-$w760: 760px
-$w640: 640px
-$w560: 560px
-$w480: 480px
-$w360: 360px
-$w320: 320px
+// $min1920: 1920px
+// $w1280: 1280px
+// $w1270: 1270px
+// $w1024: 1024px
+// $w900: 900px
+// $w860: 860px
+// $w800: 800px    
+// $w760: 760px
+// $w640: 640px
+// $w560: 560px
+// $w480: 480px
+// $w360: 360px
+// $w320: 320px
 
-=r($media)
-	@if $media == w1280
-		@media only screen and (max-width: $w1280)
-			@content
-	@if $media == w1270
-		@media only screen and (max-width: $w1270)
-			@content
-	@if $media == w1024
-		@media only screen and (max-width: $w1024)
-			@content
-	@if $media == w900
-		@media only screen and (max-width: $w900)
-			@content
-	@if $media ==w860
-		@media only screen and (max-width: $w860)
-			@content
-	@if $media == w800
-		@media only screen and (max-width: $w800)
-			@content
-	@if $media == w760
-		@media only screen and (max-width: $w760)
-			@content
-	@if $media == w640
-		@media only screen and (max-width: $w640)
-			@content
-	@if $media == w560
-		@media only screen and (max-width: $w560)
-			@content
-	@if $media == w480
-		@media only screen and (max-width: $w480)
-			@content
-	@if $media == w360
-		@media only screen and (max-width: $w360)
-			@content 
-	@if $media == w320
-		@media only screen and (max-width: $w320)
-			@content
-	@if $media == min1920
-		@media only screen and (min-width: $min1920)
-			@content
+// =r($media)
+// 	@if $media == w1280
+// 		@media only screen and (max-width: $w1280)
+// 			@content
+// 	@if $media == w1270
+// 		@media only screen and (max-width: $w1270)
+// 			@content
+// 	@if $media == w1024
+// 		@media only screen and (max-width: $w1024)
+// 			@content
+// 	@if $media == w900
+// 		@media only screen and (max-width: $w900)
+// 			@content
+// 	@if $media ==w860
+// 		@media only screen and (max-width: $w860)
+// 			@content
+// 	@if $media == w800
+// 		@media only screen and (max-width: $w800)
+// 			@content
+// 	@if $media == w760
+// 		@media only screen and (max-width: $w760)
+// 			@content
+// 	@if $media == w640
+// 		@media only screen and (max-width: $w640)
+// 			@content
+// 	@if $media == w560
+// 		@media only screen and (max-width: $w560)
+// 			@content
+// 	@if $media == w480
+// 		@media only screen and (max-width: $w480)
+// 			@content
+// 	@if $media == w360
+// 		@media only screen and (max-width: $w360)
+// 			@content 
+// 	@if $media == w320
+// 		@media only screen and (max-width: $w320)
+// 			@content
+// 	@if $media == min1920
+// 		@media only screen and (min-width: $min1920)
+// 			@content
+
+=r($width)
+	@media only screen and (max-width: $width+'px')
+		@content
 
 =fs($sizeValue: 16)
 	font-size: $sizeValue + px
