@@ -161,12 +161,18 @@
 
 =justify
 	text-align: justify
+	line-height: 0
 	font-size: 0
+	text-justify: newspaper
+	zoom: 1
+	text-align-last: justify
 	&:after
 		content: ""
 		display: inline-block
 		width: 100%
-		height: 0
+		height: 0px
+		visibility: hidden
+		overflow: hidden
 =vertical
 	text-align: center
 	font-size: 0
