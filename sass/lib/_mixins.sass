@@ -287,3 +287,10 @@
 	-ms-transform: scale($var)
 	-webkit-transform: scale($var)
 	transform: scale($var)
+
+=counter($var)
+	counter-reset: list + $var
+	li
+		&:before
+			content: counter(list + $var)
+			counter-increment: list + $var
