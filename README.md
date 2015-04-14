@@ -1,6 +1,6 @@
 Sass Boilerplate for generic CSS/HTML
 =============
-Coderiver.com.ua boilerplate.
+<a href="http://coderiver.com.ua" target="_blank">Coderiver.com.ua</a> boilerplate.
 
 I'm using this as a starting template for almost any project now.
 It includes sprites, assorted mixins (aka code snippets), file structure, jquery+cycle+scrollto (most usable these days).
