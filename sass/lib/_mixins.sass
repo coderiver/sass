@@ -290,7 +290,7 @@
 
 =counter($var)
 	counter-reset: list + $var
-	li
+	> li
 		&:before
 			content: counter(list + $var)
 			counter-increment: list + $var
