@@ -288,9 +288,9 @@
 	-webkit-transform: scale($var)
 	transform: scale($var)
 
-=counter($var)
+=counter($var, $sep)
 	counter-reset: list + $var
 	> li
 		&:before
-			content: counter(list + $var)
+			content: counter(list + $var) $sep
 			counter-increment: list + $var
