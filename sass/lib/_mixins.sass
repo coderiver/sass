@@ -45,10 +45,10 @@
 	background-size: cover
 	background-position: 50% 50%
 	
-// =background-size($width: 100%, $height: 100%)
-// 	-moz-background-size: $width $height
-// 	-webkit-background-size: $width $height
-// 	background-size: $width $height 
+=bg-size($width: 100%, $height: 100%)
+	-moz-background-size: $width $height
+	-webkit-background-size: $width $height
+	background-size: $width $height 
 	
 // retina, also available as +hdpi
 =retina
@@ -288,9 +288,9 @@
 	-webkit-transform: scale($var)
 	transform: scale($var)
 
-=counter($var)
+=counter($var, $sep)
 	counter-reset: list + $var
 	> li
 		&:before
-			content: counter(list + $var)
+			content: counter(list + $var) $sep
 			counter-increment: list + $var
