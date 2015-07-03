@@ -38,18 +38,18 @@
 	top: 0
 	left: 0
 	width: 100%
-	height: 100%    
-	
+	height: 100%
+
 =cover
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: 50% 50%
-	
+
 =bg-size($width: 100%, $height: 100%)
 	-moz-background-size: $width $height
 	-webkit-background-size: $width $height
-	background-size: $width $height 
-	
+	background-size: $width $height
+
 // retina, also available as +hdpi
 =retina
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
@@ -62,8 +62,8 @@
 	position: absolute
 	top: 50%
 	left: 50%
-	+translate(-50%,-50%)  
-	
+	+translate(-50%,-50%)
+
 //simple gradient
 =g($color1, $color2)
 	+background-image(linear-gradient($color1, $color2))
@@ -79,7 +79,7 @@
 		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff2") format("woff2"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
 		font-weight: normal
 		font-style: normal
-// usage: 
+// usage:
 //+font(black, cytiapro-black-webfont)
 
 // ROTATE
@@ -133,7 +133,7 @@
 		display: inline-block
 		vertical-align: middle
 		width: 0
-		height: 100% 
+		height: 100%
 
 =clr
 	&:after
@@ -279,7 +279,7 @@
 	-ms-transform: rotate($var+deg)
 	-webkit-transform: rotate($var+deg)
 	transform: rotate($var+deg)
-	
+
 =blur($var)
 	-webkit-filter: blur($var)
 	filter: blur($var)
@@ -294,3 +294,12 @@
 		&:before
 			content: counter(list + $var) $sep
 			counter-increment: list + $var
+
+@function makelongshadow($color)
+	$val: 0px 0px $color
+	@for $i from 1 through 200
+		$val: #{$val}, #{$i}px #{$i}px #{$color}
+	@return $val
+
+=longshadow($color)
+	text-shadow: makelongshadow($color)
