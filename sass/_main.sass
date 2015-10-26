@@ -1,1 +1,234 @@
 // Normally mainpage styles
+%in
+	width: 100%
+	margin: auto
+	max-width: 1200px
+	padding: 0 15px
+
+.top
+	position: relative
+	+jpg(top__bg)
+	+cover
+	width: auto
+	&__line
+		background-color: rgba(8, 3, 37, .45)
+		min-height: 92px
+		position: relative
+
+	&__in
+		@extend %in	
+		position: relative
+		+clr
+		+r(1000)
+			padding: 0
+	&__logo
+		font-size: 0
+		color: transparent
+		+s(top__logo)
+		display: block
+		float: left
+		margin: 26px 0 28px
+		+r(1200)
+			margin-left: 20px
+		
+	&__nav
+		display: block
+		overflow: hidden
+		//margin: 0 300px
+		margin: 0 25%
+		font-size: 0
+		background-color: rgba(5, 6, 17, .36)
+		+r(1000)
+			clear: both
+			background-color: rgba(5, 6, 17, 1)
+			width: 100%
+			margin: 0
+		+r(850)
+			position: absolute
+			z-index: 99
+			top: 92px	
+
+		li
+			display: inline-block
+			text-align: center
+			width: 25%
+			+r(850)
+				display: block
+				width: auto
+			&:hover, &:focus
+				background-color: #f1c40f
+				+transition(all .5s)
+			a
+				display: inline-block
+				padding: 26px 0
+				text-align: left
+				+r(850)
+					padding: 10px 0
+			p
+				color: white
+				font-size: 16px
+				font-weight: 300
+				line-height: 20px
+				+light
+				text-transform: uppercase
+			span
+				color: #eaeaea
+				+light
+				font-size: 13px
+				font-weight: 100
+				line-height: 20px
+				display: block
+				+r(850)
+					display: none	
+
+	&__cont
+		float: right
+		width: 239px
+		margin-top: 15px
+		font-size: 0
+		+r(1200)
+			text-align: right
+			margin-right: 20px
+		+r(850)
+			width: auto	
+
+	.social
+		position: relative
+		display: inline-block
+		vertical-align: top
+
+	
+		li
+			height: 64px
+			width: 64px
+			background-color: #181818	
+			position: relative
+			+transition(all 0.5s)
+			+r(850)
+				height: 50px
+				width: 60px
+			&:hover
+				background-color: #f1c40f
+			
+			&:hover ul
+				opacity: 1
+				top: 100%
+				+transition(opacity 2s)
+
+		li.is-medium
+			&:hover
+				background-color: #181818
+			+r(850)
+				display: none
+
+		li.is-small
+			width: auto
+			display: none
+			margin-top: 8px
+			+r(850)
+				display: block
+				ul
+					position: relative
+					top: 0
+					opacity: 1
+				li
+					display: inline-block	
+
+
+		li > ul
+			position: absolute
+			top: -99999px
+			opacity: 0	
+			z-index: 999	
+					
+
+		@each $s in soc, vk, tw, in
+			.social__#{$s}	
+				+s(#{$s})	
+				position: absolute
+				margin: auto
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				display: block
+
+	.tel
+		position: relative
+		overflow: hidden
+		display: inline-block
+		vertical-align: top
+		padding: 15px 0 0 35px
+		+thin
+		+r(1200)
+			padding-left: 20px
+
+		&__number
+			color: white
+			font-size: 18px
+			font-weight: 100
+			line-height: 20px
+			+r(1200)
+				text-align: left
+
+		&__time
+			color: #a1a1a1
+			font-size: 14px
+			font-weight: 100
+			line-height: 20px	
+			+r(1200)
+				text-align: left	
+
+	.col
+		width: 487px
+		margin: auto
+		text-align: center
+
+		&__pic
+			+s(top__bull)
+			display: inline-block
+			margin-top: 138px
+			margin-bottom: 20px
+			+r(1000)
+				margin-top: 80px
+
+		&__title
+			font-size: 48px
+			font-weight: 400
+			line-height: 1.2
+			text-transform: uppercase
+			color: #f8f8f8	
+			margin-bottom: 50px	
+			+rom
+
+			span
+				color: #f1c40f
+
+		&__fond
+			color: silver
+			+light
+			font-size: 16px
+			font-weight: 300
+			line-height: 20px
+			margin-bottom: 10px
+
+		&__price
+			color: white
+			+med
+			font-size: 36px
+			font-weight: 500
+			line-height: 61px
+			display: inline-block
+			+s(top__bgred)	
+			margin-bottom: 60px
+
+		&__btn
+			width: 230px
+			height: 55px
+			margin-bottom: 77px	
+			+r(1000)
+				margin-bottom: 44px
+
+
+
+	

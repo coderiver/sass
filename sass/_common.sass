@@ -55,3 +55,72 @@ body
 
 
 // common blocks
+a
+	color: #fff
+	+transition( all .3s)
+	text-decoration: none
+
+// fonts
+
++font("HelveticaNeue Bold", helveticaneuecyr-bold)
++font("HelveticaNeue Medium", helveticaneuecyr-medium)
++font("HelveticaNeue Roman", helveticaneuecyr-roman-webfont)
++font("HelveticaNeue Light", helveticaneuecyr-light)
++font("HelveticaNeue Regular", HelveticaNeueCyr-Reg)
++font("HelveticaNeue Thin", helveticaneue-thin)
+
+
+=bold
+	font-family: "HelveticaNeue Bold", Helvetica, sans-serif 
+=med
+	font-family: "HelveticaNeue Medium", Helvetica, sans-serif 
+=rom
+	font-family: "HelveticaNeue Roman", Helvetica, sans-serif 
+=light
+	font-family: "HelveticaNeue Light", Helvetica, sans-serif 
+=reg
+	font-family: "HelveticaNeue Regular", Helvetica, sans-serif
+=thin
+	font-family: "HelveticaNeue Thin", Helvetica, sans-serif
+
+
+//BUTTONS
+.btn
+	border: 3px solid #f8f8f8
+	display: inline-block
+	position: relative
+	overflow: hidden
+	&:hover, &:focus
+		.btn_in
+			left: 0
+			+transition(all 0.7s)
+		span	
+			color: black
+			+transition(all 0.4s)
+			font-weight: bold
+	span
+		color: white
+		+light
+		font-size: 20px
+		font-weight: 300
+		line-height: 20px	
+		position: relative
+		z-index: 10
+
+.btn_transparent	
+	background-color: transparent
+
+.btn_white
+	background-color: #FFF	
+
+.btn_in
+	position: absolute
+	top: 0
+	left: -101%
+	width: 100%
+	height: 100%
+	z-index: 1	
+
+
+
+				
