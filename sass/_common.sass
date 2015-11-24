@@ -47,11 +47,368 @@
 // p
 // 	+jpg(bla)
 
+//icons
+.ico 
+	display: inline-block
+	vertical-align: top
+	&.ico-clock
+		+s(ico-clock)
+	&.ico-map
+		+s(ico-map)
+	&.ico-select
+		+s(ico-select)	
+	&.ico-heart
+		+s(ico-heart)	
+
+
+//fonts
++font("Nexa Heavy", nexaheavy)
++font("Nexa Bold", nexabold)
++font("Nexa Regular", nexaregular)
++font("Helvetica", helvetica)
+
+=heavy
+	font-family: "Nexa Heavy", Arial, sans-serif
+=bold
+	font-family: "Nexa Bold", Arial, sans-serif
+=regular
+	font-family: "Nexa Regular", Arial, sans-serif
+=helvetica
+	font-family: "Helvetica", Arial, sans-serif	
+
+//vars
+$orange : #f26c4f
+$dark : #373737
+$gray : #474747
+$white : #ebebeb
+$border: #767676
+
+//reset
+a
+	text-decoration: none
+
+h1, h2, h3, h4, h5, h6, em, strong, i, th, td
+	font-weight: normal
+	font-style: normal
+
+//BASE
+*
+	+box
 
 body
 	font-family: Arial, sans-serif
 	font-size: 12px
 	line-height: 1.4
 
+b 
+	font-weight: bold	
 
-// common blocks
+h2
+	color: #707070
+	+bold
+	font-size: 30px
+	font-weight: 700
+	line-height: 1.2
+
+//extend
+.in
+	width: 940px
+	margin: auto
+
+%in
+	@extend .in		
+
+
+//import
+.import
+	color: $orange		
+
+//header
+.header
+	min-height: 136px
+
+	&__col1
+		float: left
+
+	&__col2
+		float: right
+
+	&__top	
+		background-color: $dark	
+
+	&__in
+		@extend %in
+		+clr
+		
+	&__search
+		width: 300px
+		height: 46px
+		margin: 11px 0
+		position: relative
+		input
+			border: none
+			&:focus
+				outline: none
+		input[type=search]
+			-webkit-appearance: none
+			width: 100%
+			height: 100%
+			background-color: white
+			box-shadow: 0 1px 1px black
+			padding: 5px 40px 5px 20px
+			&::-webkit-search-cancel-button
+				-webkit-appearance: none	
+		input[type=submit]
+			display: block
+			font-size: 0
+			background-color: transparent
+			position: absolute
+			top: 50%
+			right: 13px
+			+translate(0, -50%)
+			+s(ico-clock)	
+
+	&__bot
+		background-color: $gray	
+	
+	&__links
+		font-size: 0
+		li
+			position: relative
+			display: inline-block
+			vertical-align: top
+			margin: 24px 0 24px 19px
+			padding: 0 16px 0 0
+			&:after
+				display: block
+				content: ''
+				position: absolute
+				top: -3px
+				right: 0
+				height: 25px
+				border-right: 1px solid $border
+			a
+				text-shadow: 0 1px 0 rgba(0, 0, 0, 0.21)
+				color: #d5d5d5
+				+bold
+				font-size: 12px
+				font-weight: 700
+
+		.links_ico
+			display: inline-block
+			vertical-align: middle
+
+		.links__map
+			margin-left: 9px
+			+s(ico-map)
+
+		.links__select
+			margin-left: 11px
+			+s(ico-select)
+//logo
+.logo
+	display: inline-block
+	line-height: 1
+	font-size: 0
+	span
+		background-color: $orange
+		display: inline-block
+		vertical-align: middle
+		width: 78px
+		height: 68px
+		+heavy
+		color: white
+		font-size: 36px
+		font-weight: 400
+		line-height: 60px
+		text-align: center
+		position: relative
+		&:after
+			display: block
+			content: ''
+			position: absolute
+			right: -13px
+			top: 50%
+			+translate(0, -50%)
+			width: 13px
+			height: 26px
+			border-top: 13px solid transparent
+			border-bottom: 13px solid transparent
+			border-left: 13px solid $orange	
+
+	h1
+		display: inline-block
+		vertical-align: middle
+		margin-left: 22px
+		+regular
+		font-size: 18px
+		color: white
+		+regular
+
+//nav
+.nav
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 24px 0
+		+tr(all .4s)
+		&.active, &:hover
+			border-bottom: 4px solid $orange
+
+		a
+			padding: 0 23px
+			color: #fff
+			+bold
+			font-size: 12px
+			border-right: 1px solid $border		
+
+//line
+.line
+	min-height: 71px
+	line-height: 71px
+	background-color: $white	
+
+	&__in 
+		@extend %in
+		+clr
+
+	&__col
+		float: right	
+
+	&__soc
+		font-size: 0
+
+		li 
+			display: inline-block
+			vertical-align: top
+			margin-right: 30px
+			&:last-child
+				margin-right: 0
+
+		a 
+			text-shadow: 0 1px 0 white
+			color: #8f8f8f
+			+bold
+			font-size: 12px
+			font-weight: 700	
+			display: inline-block
+			vertical-align: middle
+
+	@each $s in tw, fb, rss, mail
+		.soc__#{$s} 	
+			+s(#{$s})
+			display: inline-block
+			vertical-align: middle
+			margin-right: 9px	
+
+//l
+.l
+	background-color: $white
+	&__in 
+		@extend %in
+		+clr
+
+	.l-col1
+		float: right
+		width: 300px
+
+	.l-col2
+		overflow: hidden
+		margin-right: 320px
+
+
+//banner
+.banner
+	background-color: $dark
+	position: relative
+
+	&__block
+		padding: 24px 35px 44px 30px
+
+	h3
+		color: white
+		+bold
+		font-size: 25px
+		font-weight: 700
+		line-height: 31px
+		margin-bottom: 12px	
+
+	p	
+		font: 400 12px/21px Arail, sans-serif
+		color: #fff
+
+//post
+.post
+	background-color: #FFF
+	padding: 30px 30px 75px 50px
+	position: relative	
+
+	h2
+		margin-bottom: 14px
+
+	p 
+		font: 400 12px/22px Arial, sans-serif	
+
+	.post__first
+		color: #707070
+		+bold
+		font-size: 14px
+		font-weight: 700
+		line-height: 25px	
+		margin-bottom: 20px	
+
+	&__bot 
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 41px
+		background-color: $white
+		box-shadow: 0 1px 1px black		
+
+
+
+//footer
+.footer
+	min-height: 250px
+	background-color: $dark
+	font-size: 0
+
+	&__in
+		@extend %in 
+		+clr
+
+	&__col1
+		float: left
+
+	&__col2
+		float: right	
+
+	&__top
+		background-color: $gray		
+
+
+	&__links
+		position: relative
+		margin: 50px 0 20px
+
+		li
+			display: inline-block
+			vertical-align: top
+			margin-right: 20px
+
+			a	
+				font-size: 12px	
+				color: #fff			
+				+helvetica
+				&:hover
+					text-decoration: underline	
+
+	&__text
+		color: #7e7e7e
+		+helvetica
+		font-size: 11px
+		font-weight: 400
+		line-height: 21px
+		padding-right: 175px										
